@@ -16,4 +16,4 @@ I learn a lot of stuff related to data science skills as below.
 - Python
 - Dashboard
 
-You can find me on LinkedIn linkedin.com/in/nattinee-ounmee-294904129
+You can find me on LinkedIn https://www.linkedin.com/in/nattinee-ounmee-294904129/
