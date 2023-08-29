@@ -15,3 +15,5 @@ I learn a lot of stuff related to data science skills as below.
 - Essential Machine Learning for Data Analyst
 - Python
 - Dashboard
+
+You can find me on LinkedIn linkedin.com/in/nattinee-ounmee-294904129
