@@ -1,1 +1,14 @@
-{"nbformat":4,"nbformat_minor":0,"metadata":{"colab":{"provenance":[],"authorship_tag":"ABX9TyMHFgL0UNpSwIwu02PSVABV"},"kernelspec":{"name":"python3","display_name":"Python 3"},"language_info":{"name":"python"}},"cells":[{"cell_type":"markdown","source":["# HW03 - find public API and use python to get data"],"metadata":{"id":"kn8qnT9kEZYT"}},{"cell_type":"code","source":["import requests\n","import pandas as pd\n","\n","# Make a request to the API\n","response = requests.get(\"https://hp-api.onrender.com/api/characters/students\")\n","\n","# Parse the response into JSON\n","data = response.json()\n","\n","# Create a Pandas DataFrame from the parsed data\n","df = pd.DataFrame(data)\n","\n","# Print the DataFrame\n","print(df[['name', 'house', 'gender', 'dateOfBirth','ancestry']].head(10))"],"metadata":{"colab":{"base_uri":"https://localhost:8080/"},"id":"WOHvvijmGZCu","executionInfo":{"status":"ok","timestamp":1695911084383,"user_tz":-420,"elapsed":470,"user":{"displayName":"Nattinee Ounmee","userId":"11555680246924554103"}},"outputId":"439100dd-de58-4793-cdca-4be6f8c6bee2"},"execution_count":49,"outputs":[{"output_type":"stream","name":"stdout","text":["                 name       house  gender dateOfBirth    ancestry\n","0        Harry Potter  Gryffindor    male  31-07-1980  half-blood\n","1    Hermione Granger  Gryffindor  female  19-09-1979  muggleborn\n","2         Ron Weasley  Gryffindor    male  01-03-1980  pure-blood\n","3        Draco Malfoy   Slytherin    male  05-06-1980  pure-blood\n","4      Cedric Diggory  Hufflepuff    male        None            \n","5           Cho Chang   Ravenclaw  female  07-04-1979            \n","6  Neville Longbottom  Gryffindor    male  30-07-1980  pure-blood\n","7       Luna Lovegood   Ravenclaw  female  13-02-1981            \n","8       Ginny Weasley  Gryffindor  female  11-08-1981  pure-blood\n","9      Vincent Crabbe   Slytherin    male        None  pure-blood\n"]}]}]}
+import requests
+import pandas as pd
+
+# Make a request to the API
+response = requests.get("https://hp-api.onrender.com/api/characters/students")
+
+# Parse the response into JSON
+data = response.json()
+
+# Create a Pandas DataFrame from the parsed data
+df = pd.DataFrame(data)
+
+# Print the DataFrame
+print(df[['name', 'house', 'gender', 'dateOfBirth','ancestry']].head(10))
